@@ -5,17 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class client extends Model
+class Datereservation extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nom',
-        'prenom',
-        'email',
-        'telephone',
-        'adresse',
+        'date_depart',
+        'date_arriver',
     ];
-    public function reservations()
+    public function reservation()
     {
         return $this->hasMany(Reservation::class);
     }

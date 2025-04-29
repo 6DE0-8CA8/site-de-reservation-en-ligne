@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vehicules', function (Blueprint $table) {
-            $table->id();
+        Schema::create('datereservations', function (Blueprint $table) {
+            $table->id(); // gardé une seule fois
+            $table->date('date_depart')->nullable();
+            $table->date('date_arriver')->nullable();
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vehicules');
+        Schema::dropIfExists('datereservations');
     }
 };

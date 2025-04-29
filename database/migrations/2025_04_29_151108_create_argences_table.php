@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('argences', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('ville');
+            $table->string('telephone')->nullable();
             $table->timestamps();
         });
     }
