@@ -21,7 +21,7 @@ class reservation extends Model
         return $this->belongsTo(Client::class);
     }
 
-    public function argence()
+    public function users()
     {
         return $this->belongsTo(Argence::class);
     }
@@ -29,5 +29,9 @@ class reservation extends Model
     public function dateReservation()
     {
         return $this->belongsTo(Datereservation::class);
+    }
+    public function vehicules()
+    {
+        return $this->hasMany(vehicule::class);
     }
 }

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->integer('capacite');           // nombre de places
             $table->string('type')->nullable();    // ex: bus, minibus
             $table->foreignId('argence_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('reservation_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

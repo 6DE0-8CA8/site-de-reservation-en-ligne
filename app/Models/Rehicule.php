@@ -20,4 +20,12 @@ class vehicule extends Model
     {
         return $this->belongsTo(Argence::class);
     }
+    public function reservations()
+    {
+        return $this->belongsTo(reservation::class);
+    }
+    public function users()
+    {
+    return $this->belongsTo(user::class);
+}
 }
