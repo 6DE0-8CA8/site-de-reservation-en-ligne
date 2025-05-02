@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(clientseeder::class);
+        \App\Models\Argence::factory()->count(10)->create();
+
+        // $this->call(clientseeder::class);
     }
 }

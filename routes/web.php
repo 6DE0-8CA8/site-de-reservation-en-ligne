@@ -30,6 +30,11 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
+use App\Http\Controllers\Argencecontroller;
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('argences', Argencecontroller::class);
+});
 
 
 Route::get('/', [Acceuilcontroller::class, 'index'])->name('acceuil');

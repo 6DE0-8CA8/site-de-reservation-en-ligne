@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Argencecontroller extends Controller
+class VehiculeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $agences = \App\Models\Argence::all();
-        return view('argence.index', compact('agences'));
+        //
     }
 
     /**
